@@ -1,0 +1,115 @@
+<html>
+
+<head>
+
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+</head>
+
+<body>
+
+    <h3>Sign out from SNS</h3>
+
+
+
+    <div><a href="https://accounts.kakao.com/logout?continue=https://bangtanmvp.github.io/hi/code1.html">Sign out from Kakao</a></div>
+
+
+
+    <div><a href="https://nid.naver.com/nidlogin.logout?returl=https://bangtanmvp.github.io/hi/code1.html">Sign out from Naver</a></div>
+
+
+
+    <div><a href="https://www.tumblr.com/logout" target="_blank">Sign out from Tumblr (in new tab)</a></div>
+
+    
+
+    <div><a href="https://www.twitter.com/logout?returl=https://bangtanmvp.github.io/hi/code1.html">Sign out from Twitter</a><div/>
+
+        
+
+   
+
+
+
+    <hr>
+
+
+
+    <div>
+
+
+
+        <a href="https://www.mwave.me/en/signin?redirectUrl=https://bangtanmvp.github.io/hi/code1.html">Sign in</a>
+
+
+
+    </div>
+
+
+
+    <div>
+
+
+
+        <a href="https://www.mwave.me/signout" target="_blank">Sign out (in new tab)</a>
+
+
+
+    </div>
+
+        <div>
+
+
+
+        <button id="vote">Vote</button>
+
+
+
+    </div>
+
+    <script>
+
+        document.getElementById("vote").addEventListener("click", function() {
+
+            const form = document.createElement("form");
+
+            form.action = "http://mama.mwave.me/en/myVoteState";
+
+            form.method = "post";
+
+            form.target = "_blank";
+
+            
+
+            ["no_1=6", "no_2=11", "no_3=17", "no_4=22", "no_5=29", "no_6=30", "no_7=37", "no_8=43", "no_9=46", "no_10=56", "no_11=61", "no_12=63", "no_13=69", "no_14=74", "no_15=80", "no_16=85", "no_17=108", "no_18=147"]
+
+            .forEach((str) => {
+
+                const [key, value] = str.split("=");
+
+                const elm = document.createElement("input");
+
+                elm.type = "hidden";
+
+                elm.name = key;
+
+                elm.value = value;
+
+                form.appendChild(elm);
+
+            }, false);
+
+            document.body.appendChild(form);
+
+            form.submit();
+
+        }, false);
+
+    </script>
+
+       
+
+            
+
+</body>
